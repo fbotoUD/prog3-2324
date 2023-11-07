@@ -17,7 +17,7 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class TestFuncionParaTestParametrico {
 
-	  // Esta anotación prepara un método que devuelve todos los valores a recorrer
+	// Esta anotación prepara un método que devuelve todos los valores a recorrer
     // Tiene que estar en forma de una lista de arrays de Object
 	@Parameters
 	public static List<Object[]> data() {
