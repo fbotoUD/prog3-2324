@@ -1,4 +1,4 @@
-package es.deusto.prog3.cap03.ejecicios;
+package es.deusto.prog3.cap03.ejercicios;
 
 import java.sql.*;
 
