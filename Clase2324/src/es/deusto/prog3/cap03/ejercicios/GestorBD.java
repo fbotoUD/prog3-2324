@@ -11,8 +11,24 @@ Con este último, muestra en pantalla los resultados que éste debería de dar.
  * */
 public class GestorBD {
 	private Connection conn;
+	
+	public GestorBD() {
+		try {
+			Class.forName("org.sqlite.JDBC");
+			System.out.println("CORRECTO");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	public void connect(String name) {
-		//TODO completa
+		try {
+			conn = DriverManager.getConnection(name);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public Connection getConnection() {
@@ -22,9 +38,12 @@ public class GestorBD {
 	public void createTable() {
 		String sql = "CREATE TABLE IF NOT EXISTS employees (\n" + " idinteger PRIMARY KEY,\nname text NOT NULL,\nsalary real\n" + ");";
 		//TODO completa
-//		try {
-//			
-//		} catch (SQLException e) {System.out.println(e.getMessage());}
+		try {
+			Statement statement = conn.createStatement();
+			statement.setQueryTimeout(30);
+			statement.executeUpdate(sql);
+			
+		} catch (SQLException e) {System.out.println(e.getMessage());}
 		
 	}
 	
@@ -33,17 +52,40 @@ public class GestorBD {
 		
 		//TODO completa la tabla con usa serie de empleados
 		
+		PreparedStatement statement = conn.prepareStatement(sql);
+		statement.setString(1, name);
+		statement.setDouble(2, salary);
+		statement.execute();
+		
 	}
 	
 	public ResultSet selectAll() {
 		String sql = "SELECT * FROM employees";
-		
-		//TODO completa
+		Statement st;
+		ResultSet result;
+		try {
+			st = conn.createStatement();
+			result = st.executeQuery(sql);
+			
+			while(result.next()) {
+				System.out.println("name "+result.getString("name"));
+				System.out.println("name "+result.getString("salary"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return null;
 	}
 	
-	public static void main(String[] args) throws SQLException {	
+	public static void main(String[] args) throws SQLException {
+		
+		GestorBD gestor = new GestorBD();
+		gestor.connect("jdbc:sqlite:prueba.bd");
+		gestor.createTable();
+		gestor.insert("Albert", 2000.0);
+		gestor.selectAll();
 	
 	}
 
