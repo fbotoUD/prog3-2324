@@ -9,7 +9,7 @@ public class CsvReadMain {
 
 	public static void main(String[] args) {
 		//Se abre el fichero usando la utilizadad "try-catch with closeable resources"
-		try (BufferedReader in = new BufferedReader(new FileReader("src/es/deusto/prog3/cap03/resueltos/usuarios.csv"))) {
+		try (BufferedReader in = new BufferedReader(new FileReader("resources/usuarios.csv"))) {
 			String linea;
 			List<User> users = new ArrayList<>();
 			

@@ -12,7 +12,9 @@ import es.deusto.prog3.examen.ord202201.RocketLaunch;
 
 
 /*
- * Este ejercicio se trata de lanzamientos de cohetes espaciales (examen ordinaria 2022). Se proporciona el código fuente de la clase RocketLaunch.java que representa la información de un lanzamiento.
+ * Este ejercicio se trata de lanzamientos de cohetes espaciales (examen ordinaria 2022). Se proporciona el código fuente de la
+ * clase RocketLaunch.java (es.deusto.prog3.examen.ord202201.RocketLaunch)
+ * que representa la información de un lanzamiento.
  * Además, un fichero binario "lanzamientos.obj" en el que se ha serializado (almacenado)
  * una lista de objetos de tipo RocketLaunch (List<RocketLaunch>).
  * Objetivo: leer el contenido del fichero lanzamientos.obj para recuperar la lista de lanzamientos
