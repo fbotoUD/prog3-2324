@@ -4,31 +4,9 @@ import java.util.*;
 
 /*
  *   Set:
-        Descripción: Una colección que no permite elementos duplicados.
-        Garantiza que no puede haber elementos repetidos en la colección.
-        Implementaciones: HashSet, TreeSet y LinkedHashSet.
-        
-
-    List:
-        Descripción: Una colección ordenada que permite elementos duplicados.
-        Los elementos se almacenan en un orden específico, y cada elemento tiene un índice.
-        Implementaciones: ArrayList, LinkedList.
-
-    Queue:
-        Descripción: Representa una cola en la que los elementos se insertan al final y se eliminan del principio
-        (FIFO - First In, First Out).
-        Implementaciones: LinkedList.
-
-    Deque (Double-ended queue):
-        Descripción: Una cola en la que se pueden insertar y eliminar elementos tanto al principio como al final. Puede funcionar como una cola (FIFO) o una pila (LIFO).
-        Implementaciones: LinkedList.
-
-    Map:
-        Descripción: Representa una colección de pares clave-valor. Cada clave está asociada con exactamente un valor.
-        Implementaciones: HashMap, TreeMap, LinkedHashMap.
-
-Son interfaces, por tanto para utilizarlas, debes instanciar las clases concretas que las implementan.
-Por ejemplo, para usar un conjunto (Set), podrías crear un objeto HashSet o TreeSet.
+ *   Descripción: Una colección que no permite elementos duplicados.
+ *   Garantiza que no puede haber elementos repetidos en la colección.
+ *   Implementaciones: HashSet, TreeSet y LinkedHashSet.        
  * */
 
 public class EjemploSet {

@@ -3,6 +3,10 @@ package es.deusto.prog3.cap05;
 import java.util.*;
 
 /*
+ * Map:
+ * Descripción: Representa una colección de pares clave-valor. Cada clave está asociada con exactamente un valor.
+ * Implementaciones: HashMap, TreeMap, LinkedHashMap.
+ * 
  *  HashMap: acceso rápido y el orden no importa
  *  TreeMap: mantener un orden específico de los elementos. Tiene un rendimiento logarítmico.
  *  LinkedHashMap: Mantener el orden de inserción, rendimiento cercano a HashMap.

@@ -30,6 +30,11 @@ class Persona {
 }
 
 /*
+ *  List:
+ *  Descripción: Una colección ordenada que permite elementos duplicados.
+ *  Los elementos se almacenan en un orden específico, y cada elemento tiene un índice.
+ *  Implementaciones: ArrayList, LinkedList.
+ *          
  *  ArrayList: Se suele preferir cuando se necesita un acceso rápido a elementos por índice
  *  y no se realizan muchas operacionesde inserción o eliminación en el medio de la lista.
  *  LinkedList: Puede ser más eficiente en escenarios donde se realizan frecuentes operaciones de inserción
@@ -71,7 +76,7 @@ public class EjemploList {
         numeros.add(1);
 
         // Ordenar la lista en orden inverso
-//        Collections.sort(numeros, Collections.reverseOrder());
+        Collections.sort(numeros, Collections.reverseOrder());
         
         // Imprimir la lista ordenada en orden inverso
         System.out.println("Lista ordenada en orden inverso: " + numeros);
@@ -103,6 +108,8 @@ public class EjemploList {
         personasLinked.add(1, new Persona("Issac", 30));
         System.out.println("Linked list con el último en medio:");
         personasLinked.forEach(e -> System.out.println(e));
+        
+        //Revisa el orden de las adiciones
         
         
         
