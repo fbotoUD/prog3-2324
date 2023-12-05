@@ -1,10 +1,7 @@
 package es.deusto.prog3.cap05;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 class Persona {
     private String nombre;
@@ -32,7 +29,14 @@ class Persona {
     }
 }
 
-public class AvanzadoArrayList {
+/*
+ *  ArrayList: Se suele preferir cuando se necesita un acceso rápido a elementos por índice
+ *  y no se realizan muchas operacionesde inserción o eliminación en el medio de la lista.
+ *  LinkedList: Puede ser más eficiente en escenarios donde se realizan frecuentes operaciones de inserción
+ *  o eliminación en el medio de la lista y el acceso por índice no es crítico.
+ * */
+
+public class EjemploList {
 
     public static void main(String[] args) {
         // Crear una lista de personas
@@ -76,6 +80,30 @@ public class AvanzadoArrayList {
         
         
         /////////////////
+        
+        LinkedList<String> listaLinkedList = new LinkedList<>();
+
+        // Agregar elementos
+        listaLinkedList.add("Manzana");
+        listaLinkedList.add("Banana");
+        listaLinkedList.add("Naranja");
+        listaLinkedList.add("Uva");
+
+        // Utilizar una expresión lambda para imprimir cada elemento
+        System.out.println("Elementos en LinkedList:");
+
+        listaLinkedList.forEach(elemento -> System.out.println(elemento));
+        
+        LinkedList<Persona> personasLinked = new LinkedList<>();
+        personasLinked.add(new Persona("Albert", 25));
+        personasLinked.add(new Persona("Carl Friedrich", 22));
+        System.out.println("Linked list con algunos:");
+        personasLinked.forEach(e -> System.out.println(e));
+        
+        personasLinked.add(1, new Persona("Issac", 30));
+        System.out.println("Linked list con el último en medio:");
+        personasLinked.forEach(e -> System.out.println(e));
+        
         
         
 
