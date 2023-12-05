@@ -2,6 +2,7 @@ package es.deusto.prog3.cap05;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -56,6 +57,27 @@ public class AvanzadoArrayList {
         personas.forEach(System.out::println);
         
         //TODO ordenar alfabéticamente
+        
+        /////////
+        //Revisa el uso de reverse order
+        List<Integer> numeros = new ArrayList<>();
+        numeros.add(5);
+        numeros.add(2);
+        numeros.add(8);
+        numeros.add(1);
+
+        // Ordenar la lista en orden inverso
+//        Collections.sort(numeros, Collections.reverseOrder());
+        
+        // Imprimir la lista ordenada en orden inverso
+        System.out.println("Lista ordenada en orden inverso: " + numeros);
+        //Ten en cuenta que no es lo mismo que Collections.reverse()
+        //TODO pruebalo y verifica el comportamiento
+        
+        
+        /////////////////
+        
+        
 
     }
 }
