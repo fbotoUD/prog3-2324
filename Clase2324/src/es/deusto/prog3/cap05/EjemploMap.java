@@ -38,6 +38,8 @@ public class EjemploMap {
         linked.put("75972478", "Ludwig");
      // Imprimir el TreMap resultante
         System.out.println("Mapa resultante: " + linked);
+        
+        //¿Analiza los resultados en la consola?
     }
 
 }
