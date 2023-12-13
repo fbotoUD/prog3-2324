@@ -15,6 +15,7 @@ import javax.swing.event.DocumentListener;
  * Un DocumentListener es una interfaz que permite escuchar y responder a cambios en un componente
  * de texto asociado a un Document.
  * La interfaz DocumentListener define tres métodos: insertUpdate, removeUpdate, changedUpdate.
+ * https://docs.oracle.com/javase/8/docs/api/javax/swing/event/DocumentListener.html
  * */
 public class EjemploDocumentTextField {
     public static void main(String[] args) {
